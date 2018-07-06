@@ -1,0 +1,12 @@
+# {{ ansible_managed }}
+
+DEFAULT {% if tftp_vesamenu -%} vesa {%- endif -%} menu.c32
+PROMPT {{ tftp_always_show_boot_prompt | int }}
+
+{% if tftp_kbmap is defined -%}
+KBDMAP {{ tftp_kbmap }}
+{%- endif %}
+
+{}
+
+{% for }
