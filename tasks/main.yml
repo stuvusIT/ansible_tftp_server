@@ -1,3 +1,6 @@
 ---
-
-...
+- name: Install tftp server
+  apt:
+    name: tftpd-hpa
+  when: tftp_server_use_hpa
+    
