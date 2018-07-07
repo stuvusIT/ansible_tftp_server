@@ -1,0 +1,5 @@
+---
+tftpd_username: tftp
+tftpd_directory: /srv/tftp
+tftpd_address: ":69"
+tftpd_options: --secure

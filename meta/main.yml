@@ -1,0 +1,25 @@
+---
+galaxy_info:
+  author: Mohammed El-Rajab
+  description: Installs a tftpd-hpa server
+  company: stuvus (https://stuvus.uni-stuttgart.de)
+
+  license: CC-BY-SA
+
+  min_ansible_version: 2.4
+
+  platforms:
+    - name: Ubuntu
+      versions:
+        - xenial
+        - bionic
+    - name: Debian
+      versions:
+        - stretch
+
+  galaxy_tags:
+    - tftp
+    - pxe
+    - boot
+
+dependencies: []
