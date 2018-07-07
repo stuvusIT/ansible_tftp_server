@@ -1,2 +1,5 @@
 ---
-tftp_server_use_hpa: True
+tftpd_username: tftp
+tftpd_directory: /srv/tftp
+tftpd_address: ":69"
+tftpd_options: --secure

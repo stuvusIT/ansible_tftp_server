@@ -1,0 +1,6 @@
+---
+- name: Restart tftpd
+  service:
+    name: tftpd-hpa.service
+    state: restarted
+    enabled: True

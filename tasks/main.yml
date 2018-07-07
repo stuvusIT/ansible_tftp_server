@@ -1,6 +1,21 @@
 ---
-- name: Install tftp server
+- name: Install tftpd-hpa server
   apt:
     name: tftpd-hpa
-  when: tftp_server_use_hpa
+
+- name: Write configuration file
+  template:
+    src: tftpd-hpa.j2
+    dest: /etc/default/tftpd-hpa
+    owner: root
+    group: tftp
+    mode: 0640
+  notify: Restart tftpd
     
+- name: Create root directory
+  file:
+    path: "{{ tftpd_directory }}"
+    state: directory
+    owner: root
+    group: tftp
+    mode: 0750
