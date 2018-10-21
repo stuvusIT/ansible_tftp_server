@@ -3,3 +3,7 @@ tftpd_username: tftp
 tftpd_directory: /srv/tftp
 tftpd_address: ":69"
 tftpd_options: --secure
+tftpd_users: []
+tftpd_owner: root
+tftpd_group: tftp
+tftpd_mode: 0755

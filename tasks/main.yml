@@ -16,6 +16,13 @@
   file:
     path: "{{ tftpd_directory }}"
     state: directory
-    owner: root
-    group: tftp
-    mode: 0750
+    owner: "{{ tftpd_owner }}"
+    group: "{{ tftpd_group }}"
+    mode: "{{ tftpd_mode }}"
+
+- name: Add users to tftp group
+  user:
+    append: yes
+    groups: tftp
+    name: "{{ item }}"
+  with_items: "{{ tftpd_users }}"
